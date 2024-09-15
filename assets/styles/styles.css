@@ -115,6 +115,7 @@ h2, h3 {
 
     @media screen and (min-width: 992px) {
       padding: 3.65rem 3.16666rem;
+      padding-bottom: 2.5rem;
 
       .lead {
         font-size: 3.295rem;
