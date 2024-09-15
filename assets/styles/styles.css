@@ -1,0 +1,362 @@
+:root {
+  --Purple-100: hsl(254, 88%, 90%);
+  --Purple-500: hsl(256, 67%, 59%);
+  --Yellow-100: hsl(31, 66%, 93%);
+  --Yellow-500: hsl(39, 100%, 71%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 7%);
+}
+
+@media screen and (min-width: 992px) {
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+img {
+  max-width: 100px;
+}
+
+h2, h3 {
+  font-weight: 500;
+}
+
+.content, .grid-1, .grid-2 {
+  gap: 1.7222rem;
+
+  @media screen and (min-width: 992px) {
+    gap: 1.777rem;
+  }
+}
+
+.content {
+  display: grid;
+  max-width: 1120px;
+  margin: 1.7777rem 0.888rem;
+  grid-template-columns: 1fr;
+  grid-template-areas: "grid1" "grid2";
+
+  section {
+    border-radius: 9px;
+  }
+
+  @media screen and (min-width: 992px) {
+    margin: 4.611rem 0.888rem;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "grid2 grid1";
+  }
+
+  @media screen and (min-width: 1120px) {
+    margin: 4.611rem auto;
+  }
+
+  .grid-1 {
+    display: grid;
+    grid-area: grid1;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+          "five-stars" "multiple-platforms" "consistent-schedule"
+          "schedule-posts" "grow-followers" "audience-growth";
+
+    @media screen and (min-width: 992px) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+          "five-stars five-stars schedule-posts"
+          "multiple-platforms consistent-schedule schedule-posts"
+          "audience-growth grow-followers grow-followers";
+    }
+  }
+
+  .grid-2 {
+    display: flex;
+    flex-direction: column;
+    grid-area: grid2;
+  }
+
+  .five-stars {
+    padding: 2.444rem 2.611rem;
+    grid-area: five-stars;
+    background-color: var(--Purple-500);
+    color: var(--White);
+    text-align: center;
+
+    .lead {
+      font-size: 2.525rem;
+      font-weight: 500;
+      line-height: 1;
+
+      span {
+        color: var(--Yellow-500);
+      }
+    }
+
+    .image {
+      margin-top: 1.1rem;
+      max-width: 190px;
+    }
+
+    .text {
+      margin-top: 0.15rem;
+    }
+
+    @media screen and (min-width: 992px) {
+      padding: 3.7222rem 3.16666rem;
+
+      .lead {
+        font-size: 3.295rem;
+      }
+    }
+  }
+
+  .multiple-platforms {
+    padding: 1rem;
+    grid-area: multiple-platforms;
+    background-color: var(--White);
+    overflow: hidden;
+
+    .lead {
+      margin-top: 1rem;
+      color: var(--Black);
+      font-size: 1.25rem;
+      text-align: left;
+      line-height: .85;
+    }
+
+    .image {
+      max-width: 305px;
+    }
+
+    @media screen and (min-width: 992px) {
+      padding: 1.1111rem 1.5rem;
+
+      .lead {
+        margin-top: 1.2222rem;
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  .consistent-schedule {
+    position: relative;
+    grid-area: consistent-schedule;
+    background-color: var(--Yellow-500);
+    text-align: left;
+    padding: 1rem;
+    overflow: hidden;
+
+    .lead {
+      font-size: 1.35rem;
+      color: var(--Black);
+    }
+
+    .image {
+      max-width: 208px;
+      margin-top: 0.666rem;
+      margin-bottom: -2.5rem;
+    }
+
+    @media screen and (min-width: 992px) {
+      padding: 1.44444rem;
+
+      .lead {
+        font-size: 1.7222rem;
+        line-height: .95;
+      }
+
+      .image {
+        max-width: 100%;
+        margin-bottom: -8.2rem;
+      }
+    }
+  }
+
+  .schedule-posts {
+    padding: 1.8888rem 0.944rem;
+    grid-area: schedule-posts;
+    background-color: var(--Purple-100);
+    overflow: hidden;
+
+    .lead {
+      text-align: center;
+      font-size: 1.25rem;
+      color: var(--Black);
+      line-height: .85;
+    }
+
+    .image {
+      max-width: 100%;
+      margin-top: 1.4444rem;
+    }
+
+    .text {
+      margin-top: 1.55rem;
+      text-align: center;
+    }
+
+    @media screen and (min-width: 992px) {
+      padding: 2.8888rem 1.7777rem;
+
+      .lead {
+        text-align: left;
+        font-size: 1.65rem;
+      }
+
+      .image {
+        max-width: initial;
+        max-height: 320px;
+        margin-top: 1.4444rem;
+      }
+
+      .text {
+        margin-top: 1.4444rem;
+        text-align: left;
+      }
+    }
+
+  }
+
+  .grow-followers {
+    display: flex;
+    flex-direction: column;
+    grid-area: grow-followers;
+    padding: 1.4444rem 3.166666rem;
+    background-color: var(--Purple-500);
+    align-items: center;
+    gap: 2.277rem;
+
+    .lead {
+      color: var(--White);
+      font-size: 1.6rem;
+      text-align: center;
+      line-height: .85;
+    }
+
+    .image {
+      max-width: 100%;
+    }
+
+    @media screen and (min-width: 992px) {
+      flex-direction: row;
+      gap: 0.7222rem;
+      padding: 1.222222rem;
+
+      .lead {
+        text-align: left;
+        font-size: 2rem;
+      }
+
+      .image {
+        max-width: 228px;
+      }
+    }
+  }
+
+  .audience-growth {
+    grid-area: audience-growth;
+    padding: 1.6111rem 1.3888rem;
+    background-color: var(--White);
+
+    .lead {
+      color: var(--Black);
+      font-size: 1rem;
+
+      span {
+        display: block;
+        margin-bottom: 1rem;
+        font-size: 2.55rem;
+      }
+    }
+
+    .image {
+      max-width: 180px;
+      margin-top: 1.555rem;
+    }
+
+    @media screen and (min-width: 992px) {
+      padding: 1.6111rem 1.3888rem;
+
+      .lead {
+        font-size: 1rem;
+
+        span {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+
+  .create-post {
+    grid-area: create-post;
+    background-color: var(--Yellow-100);
+    padding: 1.83rem;
+
+    .lead {
+      font-size: 1.65rem;
+      color: var(--Black);
+      line-height: 1;
+
+      span {
+        color: var(--Purple-500);
+        font-style: italic;
+      }
+    }
+
+    .image {
+      max-width: 194px;
+      margin-top: 1.055rem;
+    }
+
+    @media screen and (min-width: 992px) {
+      padding: 4.611rem 1.83rem;
+
+      .lead {
+        font-size: 1.95rem;
+      }
+    }
+  }
+
+  .ai-content {
+    padding: 1.5rem 1.33rem;
+    grid-area: ai-content;
+    background-color: var(--Yellow-500);
+    line-height: .85;
+
+    .lead {
+      font-size: 1.65rem;
+      color: var(--Black);
+      line-height: 1;
+    }
+
+    .image {
+      max-width: 220px;
+      margin-top: 1.055rem;
+    }
+
+    @media screen and (min-width: 992px) {
+      padding: 1.611rem 1.333rem;
+
+      .lead {
+        font-size: 2.15rem;
+      }
+
+      .image {
+        max-width: 100%;
+        margin-top: 2.77rem;
+      }
+    }
+  }
+}
